@@ -17,7 +17,7 @@ int screenWidth = 1024;
 int screenHeight = 768;
 float camRotateX = 0.0f;
 float camRotateY = 0.0f;
-float camZoom = 20.0f; 
+float camZoom = 25.0f; 
 
 bool isPaused = false;
 float globalTime = 0.0f;
@@ -57,12 +57,12 @@ struct CubeData {
 };
 
 CubeData cubes[6] = {
-    { 3.5f,  0.8f,   0.0f,   0.0f,  60.0f, 1.0f, 0.0f, 0.4f },
-    { 4.5f, -0.6f,  60.0f,   1.0f,  40.0f, 0.0f, 1.0f, 0.5f },
-    { 5.5f,  0.5f, 120.0f,  -0.5f,  80.0f, 1.0f, 1.0f, 0.6f },
-    { 6.5f, -0.4f, 180.0f,   0.8f,  50.0f, 0.5f, 1.0f, 0.35f },
-    { 7.5f,  0.3f, 240.0f,  -1.2f,  70.0f, 1.0f, 0.5f, 0.7f },
-    { 4.0f, -0.7f, 300.0f,   0.3f,  90.0f, 0.0f, 1.0f, 0.3f }
+    { 1.5f,   80.0f,   0.0f,   0.0f,  60.0f, 1.0f, 0.0f, 0.35f }, 
+    { 2.0f,  -60.0f,  60.0f,   0.2f,  40.0f, 0.0f, 1.0f, 0.45f }, 
+    { 2.5f,  100.0f, 120.0f,  -0.3f,  80.0f, 1.0f, 1.0f, 0.40f }, 
+    { 3.0f,  -70.0f, 180.0f,   0.4f,  50.0f, 0.5f, 1.0f, 0.30f }, 
+    { 3.5f,   85.0f, 240.0f,  -0.5f,  70.0f, 1.0f, 0.5f, 0.50f }, 
+    { 4.0f,  -50.0f, 300.0f,   0.1f,  90.0f, 0.0f, 1.0f, 0.38f }  
 };
 
 // HELPERS
@@ -154,7 +154,7 @@ void init() {
     if (!loadOBJ("planet.obj", planetModel)) std::cout << "Error loading OBJ" << std::endl;
     
     planetTextureId = loadTexture("planet_Quom1200.png"); 
-    cubeTextureId = loadTexture("container.png");
+    cubeTextureId = loadTexture("container.png"); 
 
     // Light Settings
     GLfloat lightAmbient[] = { 0.1f, 0.1f, 0.1f, 1.0f };
