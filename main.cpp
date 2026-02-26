@@ -266,7 +266,7 @@ int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(screenWidth, screenHeight);
-    glutCreateWindow("Final Planet Project");
+    glutCreateWindow("Planet Project");
     init();
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
